@@ -1,0 +1,12 @@
+test-port: ${random.port}
+micronaut:
+  server:
+    port: ${test-port}
+  http:
+    services:
+      basic:
+        urls:
+          - http://localhost:${test-port}
+      filtered:
+        urls:
+          - http://localhost:${test-port}
